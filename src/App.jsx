@@ -29,6 +29,7 @@ const App = () => {
   const [newIngredient, setNewIngredient] = useState("");
   const [newUstensil, setNewUstensil] = useState("");
   const [newAppliance, setNewAplliance] = useState("");
+  const [tags, setTags] = useState([]); // celle là
 
   const ingredients = recettes.flatMap((recette) =>
     recette.ingredients.map((i) => i.ingredient)
@@ -51,6 +52,7 @@ const App = () => {
     if (!queryWords.includes(event.target.value.toLowerCase())) {
       setQuery((prev) => `${prev} ${event.target.value}`.trim());
     }
+    setTags((tags) => [...tags, event.target.value]);
     setNewIngredient(event.target.value);
     setNewAplliance(event.target.value);
     setNewUstensil(event.target.value);
@@ -70,6 +72,21 @@ const App = () => {
 
     return queryWords.every((word) => searchableText.includes(word));
   });
+
+  //celle là
+  const handleDelete = (index) => {
+    const tagToRemove = tags[index];
+
+    const newTags = [...tags];
+    newTags.splice(index, 1);
+    setTags(newTags);
+
+    const newQuery = query
+      .split(/\s+/)
+      .filter((word) => word.toLowerCase() !== tagToRemove.toLowerCase())
+      .join(" ");
+    setQuery(newQuery);
+  };
 
   return (
     <>
@@ -117,6 +134,16 @@ const App = () => {
               </MenuItem>
             ))}
           </Select>
+          {/* celle là */}
+          {tags.map((tag, i) => (
+            <Chip
+              key={tag}
+              label={tag}
+              variant="outlined"
+              onDelete={() => handleDelete(i)}
+            />
+          ))}
+
           <TableContainer>
             <Table>
               <TableHead />
