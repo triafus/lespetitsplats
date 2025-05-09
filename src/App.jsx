@@ -117,10 +117,6 @@ const App = () => {
               </MenuItem>
             ))}
           </Select>
-          {arrayTags.map((tag) => (
-            <Chip label={tag} />
-          ))}
-
           <TableContainer>
             <Table>
               <TableHead />
