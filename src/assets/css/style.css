@@ -76,3 +76,45 @@ input:focus {
     font-size: 16px;
     padding-inline: 10px;
 }
+
+.Logo{
+    width: 50%;
+}
+
+@media (max-width: 1400px) {
+    header h1 {
+        font-size: 38px;
+    }
+    .search{
+        height: 38px;
+    }
+    .search>input{
+        height: 38px;
+    }
+    .svg-inline--fa {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 34px;
+    }
+    .search{
+        height: 34px;
+    }
+    .search>input{
+        height: 34px;
+    }
+    .svg-inline--fa {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+}
