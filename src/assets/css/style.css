@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #ededed;
 }
 
 .logo {
@@ -8,7 +9,7 @@ body {
     left: 20px;
 }
 
-header h1 {
+header .MuiTypography-h1 {
     color: #ffd15b;
     font-size: 44px;
     text-align: center;
@@ -27,12 +28,32 @@ header {
     align-items: center;
 }
 
+.count span.MuiTypography-root.MuiTypography-p.css-z2uw0f-MuiTypography-root {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
 
-.icone:hover{
+.css-1lt5qva-MuiCardContent-root {
+    padding: 0 !important;
+}
+
+.recipe-content {
+    padding: 16px;
+}
+
+.icone:hover {
     cursor: pointer;
 }
 
-#root {
+.user-search-info {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content {
     margin-block: 50px;
     margin-inline: 10%;
 }
@@ -45,6 +66,10 @@ header {
     padding: 10px;
     box-sizing: border-box;
     border-radius: 7px;
+}
+
+.css-1j74uew-MuiPaper-root-MuiCard-root {
+    border-radius: 20px !important;
 }
 
 .content-header {
@@ -64,33 +89,102 @@ header {
     padding: 10px 10px;
 }
 
+.recipe-content {
+    min-height: 400px;
+}
+
+input {
+    border: none;
+}
+
 input:focus {
     outline: none;
     border: none;
-  }
+}
 
-.search>input {
+.css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root {
+    height: 100%;
+    width: 100%;
+}
+
+.search-input .css-1ll44ll-MuiOutlinedInput-notchedOutline {
+    border: none;
+}
+
+.search>.search-input {
     border-width: 0px;
     height: 50px;
     width: 90%;
     font-size: 16px;
-    padding-inline: 10px;
 }
 
-.Logo{
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user-search .MuiOutlinedInput-root {
+    width: calc((100%) / 3);
+}
+
+.user-search {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.user-search-bar {
     width: 50%;
 }
 
+.topbar {
+    margin-bottom: 30px;
+}
+
+.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-hw2i8w-MuiTableCell-root {
+    width: 500px;
+}
+
+.css-1xtozoh-MuiTableRow-root {
+    width: calc((100% - 60px) / 3) !important;
+}
+
+.Logo {
+    width: 50%;
+}
+
+.css-hw2i8w-MuiTableCell-root {
+    padding: 0 !important;
+}
+
+.MuiTableContainer-root.css-70zvr5-MuiTableContainer-root {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.css-zt0z5x-MuiTableBody-root {
+    gap: 30px;
+}
+
+.css-1dc80h3-MuiTableCell-root {
+    width: 100% !important;
+}
+
 @media (max-width: 1400px) {
-    header h1 {
+    header .MuiTypography-h1 {
         font-size: 38px;
     }
-    .search{
+
+    .search {
         height: 38px;
     }
-    .search>input{
+
+    .search>input {
         height: 38px;
     }
+
     .svg-inline--fa {
         width: 40px;
         height: 40px;
@@ -98,23 +192,38 @@ input:focus {
 }
 
 @media (max-width: 1024px) {
-    header h1 {
+    header .MuiTypography-h1 {
         font-size: 34px;
     }
-    .search{
+
+    .search {
         height: 34px;
     }
-    .search>input{
+
+    .search>input {
         height: 34px;
     }
+
     .svg-inline--fa {
         width: 36px;
         height: 36px;
     }
+
+    .css-1xtozoh-MuiTableRow-root {
+        width: calc((100% - 60px) / 2) !important;
+    }
 }
 
 @media (max-width: 768px) {
-    header h1 {
+    header .MuiTypography-h1 {
         font-size: 28px;
+    }
+
+    .css-1xtozoh-MuiTableRow-root {
+        width: calc(100% - 60px) !important;
+    }
+
+    .css-tycknl-MuiTableBody-root {
+        justify-content: center !important;
     }
 }
